@@ -6,7 +6,7 @@ cd resume-builder
 
 ## For Front End/
 
-cd Front-End
+cd FrontEnd
 
 npm i
 
