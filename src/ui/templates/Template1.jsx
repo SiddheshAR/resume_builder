@@ -77,7 +77,6 @@ function Template1() {
         <div className="w-4/5 bg-white text-[rgb(255,0,0)] ml-10 mt-5">
           <hr />
         </div>
-        <h1>Hellowww this is testing code</h1>
         <div className="text-[rgb(167,27,36)] ml-10 mt-5 ">
           <h3 className="text-3xl font-semibold text-[rgb(252,255,250)] mt-[60px]">
             EDUCATION
