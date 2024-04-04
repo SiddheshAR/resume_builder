@@ -85,7 +85,7 @@ function Template2() {
         </div>
 
         <hr className="w-[650px] border ml-[65px] mt-5 border-solid border-[rgb(1,63,107)]" />
-        <div className='flex flex-row'>
+        <div className="flex flex-row">
           <div className="bg-[rgba(255,255,255,0.448)] w-[720px] h-[200px] max-h-[200px] overflow-y-auto m-[38px] rounded-[25px]">
             <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
               Skills
@@ -116,17 +116,103 @@ function Template2() {
               </ul>
             )}
           </div>
-          <div className='mt-[25px]'>
-            <p className='text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]'>Experience</p>
-            <div className='flex flex-row'>
-              <p className='ml-4'>Job Title</p>
-              <p className='ml-4'>Company name</p>
-              <p className='ml-4'>Start Date</p>
-              <p className='ml-4'>End Date</p>
-            </div>
-            <p className='text-[17px] text-[rgb(77,77,77)] m-[15px]'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus enim autem deleniti. Cumque provident aliquid doloremque blanditiis repudiandae reprehenderit odio sapiente ea quaerat repellendus, unde vitae, reiciendis distinctio ratione dolorum!
+          <div className="mt-[25px]">
+            <p className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+              Experience
             </p>
+            {userExperienceData && userExperienceData.length > 0 ? (
+              <>
+                {userExperienceData.map((exp, index) => (
+                  <div
+                    key={index}
+                    className="flex-col justify-start  exp-1 flex items-start w-[70%] gap-3 font-serif pt-2 lg:w-[100%]"
+                  >
+                    <div className="duration flex gap-x-2 ">
+                      <h2>{exp.Job_Title}</h2>
+                      <span className="text-gray-500">
+                        {exp.Company_Name} | {exp.WrkStartDate} to{' '}
+                        {exp.WrkEndDate}
+                      </span>
+                    </div>
+                    <div
+                      className="text-gray-500"
+                      dangerouslySetInnerHTML={{
+                        __html: exp.description,
+                      }}
+                    ></div>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <>
+                <div className="exp-1 flex items-center w-[70%] gap-3 font-serif pt-2 lg:w-[100%]">
+                  <h2>{'Manager'}</h2>
+                  <div className="duration text-gray-500 ">
+                    {'XYZ company'} | {'Start Date - End Date'}
+                  </div>
+                </div>
+                <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
+                  <li className="list-item">
+                    Implement effective company policies to ensure that all
+                    practices comply with labor and employment regulations
+                  </li>
+                  <li className="list-item">
+                    Increased employee retention rates by managing workplace
+                    satisfaction to an over 90% success rate by creating and
+                    maintaining a positive work environment
+                  </li>
+                  <li className="list-item">
+                    Develop targeted outreach practices to increase minority
+                    recruitment and ensure compliance with affirmative action
+                    policies
+                  </li>
+                  <li className="list-item">
+                    Monitor scheduled in and out times as well as employee
+                    breaks to ensure that proper employment laws are met
+                  </li>
+                </ul>
+
+                <div className="exp-1 flex items-center w-[70%] gap-3 font-serif pt-2 lg:w-[100%]">
+                  <h2>{'Manager'}</h2>
+                  <div className="duration text-gray-500 ">
+                    {'XYZ company'} | {'Start Date - End Date'}
+                  </div>
+                </div>
+                <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
+                  <li className="list-item">
+                    Implement effective company policies to ensure that all
+                    practices comply with labor and employment regulations
+                  </li>
+                  <li className="list-item">
+                    Increased employee retention rates by managing workplace
+                    satisfaction to an over 90% success rate by creating and
+                    maintaining a positive work environment
+                  </li>
+                  <li className="list-item">
+                    Develop targeted outreach practices to increase minority
+                    recruitment and ensure compliance with affirmative action
+                    policies
+                  </li>
+                  <li className="list-item">
+                    Monitor scheduled in and out times as well as employee
+                    breaks to ensure that proper employment laws are met
+                  </li>
+                </ul>
+              </>
+            )}
+            {/* <div className="flex flex-row">
+              <p className="ml-4">Job Title</p>
+              <p className="ml-4">Company name</p>
+              <p className="ml-4">Start Date</p>
+              <p className="ml-4">End Date</p>
+            </div>
+            <p className="text-[17px] text-[rgb(77,77,77)] m-[15px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Necessitatibus enim autem deleniti. Cumque provident aliquid
+              doloremque blanditiis repudiandae reprehenderit odio sapiente ea
+              quaerat repellendus, unde vitae, reiciendis distinctio ratione
+              dolorum!
+            </p> */}
           </div>
         </div>
 

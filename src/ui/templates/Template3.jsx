@@ -2,15 +2,18 @@ import React from 'react'
 import { selectUserData } from '../../reduxToolkit/FormDataSlice.jsx'
 import { useSelector } from 'react-redux'
 import { selectExperienceData } from '../../reduxToolkit/FormDataSlice.jsx'
+import { selectEducationData } from '../../reduxToolkit/FormDataSlice.jsx'
+
 function Template3() {
   const skillarray = ['Frontend', 'Bakcend', 'Python', 'C++']
-  const EduDetails = [
-    'Completed 10th and 12th from ICSE School',
-    'Completed B.Tech in CSE from ABC University',
-    'Completed M.Tech in CSE from ABC University',
-  ]
+  // const EduDetails = [
+  //   'Completed 10th and 12th from ICSE School',
+  //   'Completed B.Tech in CSE from ABC University',
+  //   'Completed M.Tech in CSE from ABC University',
+  // ]
   const userInputData = useSelector(selectUserData)
   const userExperienceData = useSelector(selectExperienceData)
+  const userEducationData = useSelector(selectEducationData)
   return (
     <div
       className="a4-sheet  bg-white w-[793px] h-[11210x] lg:max-h-[1110px] lg:overflow-y-auto mt-5 flex flex-col items-center  border border-gray-200 "
@@ -99,120 +102,220 @@ function Template3() {
       </div>
       {/* colorless area  */}
       <div className="data-space">
-
         {/* About me  */}
         <div className="about-me mb-[-50px] h-[380px] bg-[rgba(255,255,255,0.448)] w-[720px]">
-          
           <div className="professional-experience flex flex-row">
-            <div className='w-[90%] flex mt-3 ml-[40px] flex-col'>
-            <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
-              About me
-            </h2>
-            <p className="text-[17px] text-[rgb(84,84,84)] m-[15px]">
-              Worked with labor unions to negotiate compensation packages for
-              workers. Organized new hire training initiatives as well.
-              Worked with labor unions to negotiate compensation packages for
-              workers. Organized new hire training initiatives as well.
-            </p>
+            <div className="w-[90%] flex mt-3 ml-[40px] flex-col">
+              <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+                About me
+              </h2>
+              <p className="text-[17px] text-[rgb(84,84,84)] m-[15px]">
+                Worked with labor unions to negotiate compensation packages for
+                workers. Organized new hire training initiatives as well. Worked
+                with labor unions to negotiate compensation packages for
+                workers. Organized new hire training initiatives as well.
+              </p>
             </div>
             {/* this is EDU DESC  */}
             <div className="skill-set w-[450px] flex flex-col ml-5 mt-1 h-[230px] max-h-[230px] overflow-y-auto text-base p-5 rounded-[20px]">
-            <h2 className="text-[25px] mb-5 font-[bold] text-[rgb(99,133,255)]">
-              Key Skills
-            </h2>
-            {userInputData &&
-            userInputData.skills &&
-            userInputData.skills.length > 0 ? (
-              userInputData.skills.map((skill, index) => (
-                <ul
-                  className="pt-5 text-lg text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
-                  key={index}
-                >
-                  <div
-                    className={`skillLevel w-[${skill[1]}] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
+              <h2 className="text-[25px] mb-5 font-[bold] text-[rgb(99,133,255)]">
+                Key Skills
+              </h2>
+              {userInputData &&
+              userInputData.skills &&
+              userInputData.skills.length > 0 ? (
+                userInputData.skills.map((skill, index) => (
+                  <ul
+                    className="pt-5 text-lg text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
+                    key={index}
                   >
-                    {skill[1]}
-                  </div>
-                  <li className="updated-skill ">{skill[0]}</li>
-                </ul>
-              ))
-            ) : (
-              <div className="skillarray">
-                {skillarray.map((item) => {
-                  return (
-                    <div className="flex m-2 flex-row items-center">
-                      <div className="w-[100px] h-3 bg-[rgb(99,133,255)] mx-2.5 my-0" />{' '}
-                      <p>{item}</p>
+                    <div
+                      className={`skillLevel w-[${skill[1]}] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
+                    >
+                      {skill[1]}
                     </div>
-                  )
-                })}
-              </div>
-            )}
-          </div>  
-            
+                    <li className="updated-skill ">{skill[0]}</li>
+                  </ul>
+                ))
+              ) : (
+                <div className="skillarray">
+                  {skillarray.map((item) => {
+                    return (
+                      <div className="flex m-2 flex-row items-center">
+                        <div className="w-[100px] h-3 bg-[rgb(99,133,255)] mx-2.5 my-0" />{' '}
+                        <p>{item}</p>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-        <hr  className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]"/>
+        <hr className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
 
         <div>
-            <div className="about">
-              <h2 className="text-[25px] ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
-                Experience
-              </h2>
-              <div className='flex flex-row ml-2 items-center justify-around'>
+          <div className="about">
+            <h2 className="text-[25px]  ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+              Experience
+            </h2>
+            {userExperienceData && userExperienceData.length > 0 ? (
+              <>
+                {userExperienceData.map((exp, index) => (
+                  <div
+                    key={index}
+                    className="flex-col justify-start  ml-[50px]  exp-1 flex items-start w-[70%] gap-3 font-serif pt-2 lg:w-[100%]"
+                  >
+                    <div className="duration flex gap-x-2 ">
+                      <h2>{exp.Job_Title}</h2>
+                      <span className="text-gray-500">
+                        {exp.Company_Name} | {exp.WrkStartDate} to{' '}
+                        {exp.WrkEndDate}
+                      </span>
+                    </div>
+                    <div
+                      className="text-gray-500"
+                      dangerouslySetInnerHTML={{
+                        __html: exp.description,
+                      }}
+                    ></div>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <>
+                <div className="exp-1 flex items-center w-[70%] gap-3 font-serif pt-2 lg:w-[100%]">
+                  <h2>{'Manager'}</h2>
+                  <div className="duration text-gray-500 ">
+                    {'XYZ company'} | {'Start Date - End Date'}
+                  </div>
+                </div>
+                <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
+                  <li className="list-item">
+                    Implement effective company policies to ensure that all
+                    practices comply with labor and employment regulations
+                  </li>
+                  <li className="list-item">
+                    Increased employee retention rates by managing workplace
+                    satisfaction to an over 90% success rate by creating and
+                    maintaining a positive work environment
+                  </li>
+                  <li className="list-item">
+                    Develop targeted outreach practices to increase minority
+                    recruitment and ensure compliance with affirmative action
+                    policies
+                  </li>
+                  <li className="list-item">
+                    Monitor scheduled in and out times as well as employee
+                    breaks to ensure that proper employment laws are met
+                  </li>
+                </ul>
+
+                <div className="exp-1 flex items-center w-[70%] gap-3 font-serif pt-2 lg:w-[100%]">
+                  <h2>{'Manager'}</h2>
+                  <div className="duration text-gray-500 ">
+                    {'XYZ company'} | {'Start Date - End Date'}
+                  </div>
+                </div>
+                <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
+                  <li className="list-item">
+                    Implement effective company policies to ensure that all
+                    practices comply with labor and employment regulations
+                  </li>
+                  <li className="list-item">
+                    Increased employee retention rates by managing workplace
+                    satisfaction to an over 90% success rate by creating and
+                    maintaining a positive work environment
+                  </li>
+                  <li className="list-item">
+                    Develop targeted outreach practices to increase minority
+                    recruitment and ensure compliance with affirmative action
+                    policies
+                  </li>
+                  <li className="list-item">
+                    Monitor scheduled in and out times as well as employee
+                    breaks to ensure that proper employment laws are met
+                  </li>
+                </ul>
+              </>
+            )}
+            {/* <div className="flex flex-row ml-2 items-center justify-around">
               <p>Job Title</p>
               <p>Company name</p>
               <div>
-              <span>Start Date</span>
-              <span> - </span>
-              <span>End Date</span>
-              </div>
-              </div>
-              <div className="text-[17px] text-[rgb(84,84,84)] ml-[50px] mr-[50px] mt-2">
-                {userInputData && userInputData.description ? (
-                  userInputData.description
-                ) : (
-                  <p>
-                    Human resources generalist with 8 years of experience in HR,
-                    including hiring and terminating, disciplining employees and
-                    helping department. Human resources generalist with 8 years of experience in HR,
-                    including hiring and terminating, disciplining employees and
-                    helping department.
-                  </p>
-                )}
+                <span>Start Date</span>
+                <span> - </span>
+                <span>End Date</span>
               </div>
             </div>
+            <div className="text-[17px] text-[rgb(84,84,84)] ml-[50px] mr-[50px] mt-2">
+              {userInputData && userInputData.description ? (
+                userInputData.description
+              ) : (
+                <p>
+                  Human resources generalist with 8 years of experience in HR,
+                  including hiring and terminating, disciplining employees and
+                  helping department. Human resources generalist with 8 years of
+                  experience in HR, including hiring and terminating,
+                  disciplining employees and helping department.
+                </p>
+              )}
+            </div> */}
           </div>
+        </div>
 
-          
         {/* Professional skills  */}
-        <div className='mt-[70px]'>
-          <hr  className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]"/>
-          
-        <div className="skilldev flex flex-row items-center justify-start w-[700px] h-[280px] bg-[rgba(255,255,255,0.448)]">
+        <div className="mt-[70px]">
+          <hr className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
 
-          {/* this is edu to go up  */}
-          <div className='w-[90%] mt-[-20px] ml-[50px]'>
-              <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)]">Education</h2>
-              <div className='flex mt-5 flex-row items-center justify-end'>
-                  <p className="ml-5">School Name</p>
-                  <p className="ml-5">School Location</p>
-                  <p className="ml-5">Field of Study</p>
-                  <div className='ml-5'>
-                    <span className='ml-1'>Start Date</span>
-                    <span className='ml-1'> - </span>
-                    <span className='ml-1'>End Date</span>
+          <div className="skilldev flex flex-row items-center justify-start w-[700px] h-[280px] bg-[rgba(255,255,255,0.448)]">
+            {/* this is edu to go up  */}
+            <div className="w-[90%] mt-[-20px] ml-[50px]">
+              <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)]">
+                Education
+              </h2>
+              {userEducationData && userEducationData.length > 0 ? (
+                <>
+                  {userEducationData.map((edu, index) => (
+                    <div
+                      key={index}
+                      className="edu-1 flex-col justify-start  flex items-start w-[80%] gap-3 font-serif pt-2 lg:w-[100%]"
+                    >
+                      <div className="duration flex gap-x-2">
+                        <h2>{edu.degree}</h2>
+                        <span className="text-[15px] text-gray-500">
+                          {edu.schoolName} | {edu.startDate} - {edu.endDate}
+                        </span>
+                      </div>
+
+                      <div className="duration text-[15px] text-gray-500">
+                        {edu.description}
+                      </div>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <div>
+                  <div>
+                    <h2>{'Masters in Human Resources'}</h2>
+                    <div className="duration text-[15px] text-gray-500">
+                      {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
+                      {'End Date'}
+                    </div>
                   </div>
-                  <p className="ml-5">Degree</p>
-              </div>
-              <p className='mt-5'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Necessitatibus voluptates error officia architecto, cum magnam molestiae doloremque officiis rerum laudantium commodi, 
-                iusto delectus! Inventore, hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, quaerat!</p>
+                  <div>
+                    <h2>{'Masters in Human Resources'}</h2>
+                    <div className="duration text-[15px] text-gray-500">
+                      {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
+                      {'End Date'}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
-          {/* education details  */}
-        </div>
+            {/* education details  */}
+          </div>
         </div>
 
         <hr className="w-[700px]   mt-[-20px] ml-[50px]  h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
