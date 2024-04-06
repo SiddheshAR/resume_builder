@@ -1,20 +1,31 @@
 import React, { useState, useRef } from 'react'
 import { useReactToPrint } from 'react-to-print'
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import MultiStepForm from '../components/Form/MultiForms/MultiStepForm.jsx'
-import Template3 from './templates/Template3.jsx'
-import Template4 from './templates/Template4.jsx'
-import Template1 from './templates/Template1.jsx'
-import Template2 from './templates/Template2.jsx'
-import Template5 from './templates/Template5.jsx'
+import Header from '../../common/Header.jsx'
+import Footer from '../../common/Footer.jsx'
+import MultiStepForm from '../../Form/MultiForms/MultiStepForm.jsx'
+import Template3 from '../../ResumeTemplates/Template3.jsx'
+import Template4 from '../../ResumeTemplates/Template4.jsx'
+import Template1 from '../../ResumeTemplates/Template1.jsx'
+import Template2 from '../../ResumeTemplates/Template2.jsx'
+import Template5 from '../../ResumeTemplates/Template5.jsx'
 
-import template1 from '../assets/template1.png'
-import template2 from '../assets/template2.png'
-import template3 from '../assets/template3.png'
-import template4 from '../assets/template4.png'
-import template5 from '../assets/template5.png'
-import maintemplate from '../assets/maintemplate.png'
+// Old Paths
+// import Template3 from './templates/Template3.jsx'
+// import Template4 from './templates/Template4.jsx'
+// import Template1 from '../components/ResumeTemplates/Template1.jsx'
+// import Template2 from './templates/Template2.jsx'
+// import Template5 from './templates/Template5.jsx'
+
+// resume_builder\src\components\components\Template1.jsx
+// resume_builder\src\components\ResumeTemplates
+import template1 from '../../../assets/template1.png'
+// import template2 from '../../../assets/template2.png'
+import template3 from '../../../assets/template3.png'
+import template4 from '../../../assets/template4.png'
+import template5 from '../../../assets/template5.png'
+import maintemplate from '../../../assets/maintemplate.png'
+
+
 import Navbar from './Navbar.jsx'
 import { FaFileDownload } from 'react-icons/fa'
 

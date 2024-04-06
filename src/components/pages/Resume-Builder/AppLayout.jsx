@@ -1,23 +1,28 @@
 import React, { useState, useRef } from 'react'
 import { useReactToPrint } from 'react-to-print'
-import Header from './Header.jsx'
+import Header from '../../common/Header.jsx'
 import Navbar from './Navbar.jsx'
-import FormSection from '../components/Form/MultiForms/MultiStepForm.jsx'
+import FormSection from '../../Form/MultiForms/MultiStepForm.jsx'
 
 // Templates Import
-import Template3 from './templates/Template3.jsx'
+// import Template3 from './templates/Template3.jsx'
+// import Template1 from './templates/Template1.jsx'
+// import Template4 from './templates/Template4.jsx'
+// import Template2 from './templates/Template2.jsx'
+// import Template5 from './templates/Template5.jsx'
+import Template3 from '../../ResumeTemplates/Template3.jsx'
+import Template4 from '../../ResumeTemplates/Template4.jsx'
+import Template1 from '../../ResumeTemplates/Template1.jsx'
+import Template2 from '../../ResumeTemplates/Template2.jsx'
+import Template5 from '../../ResumeTemplates/Template5.jsx'
 
-import Template1 from './templates/Template1.jsx'
-import Template4 from './templates/Template4.jsx'
 
-import Template2 from './templates/Template2.jsx'
-import Template5 from './templates/Template5.jsx'
-import template1 from '../assets/template1.png'
-import template2 from '../assets/template2.png'
-import template3 from '../assets/template3.png'
-import template4 from '../assets/template4.png'
-import template5 from '../assets/template5.png'
-import maintemplate from '../assets/maintemplate.png'
+import template1 from '../../../assets/template1.png'
+// import template2 from '../../../assets/template2.png'
+import template3 from '../../../assets/template3.png'
+import template4 from '../../../assets/template4.png'
+import template5 from '../../../assets/template5.png'
+import maintemplate from '../../../assets/maintemplate.png'
 
 function AppLayout() {
   const [popupVisible, setPopupVisible] = useState(false)

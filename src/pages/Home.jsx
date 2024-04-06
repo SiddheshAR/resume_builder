@@ -1,4 +1,4 @@
-import Header from '../ui/Header'
+import Header from '../components/common/Header.jsx'
 import createNewResume from '../assets/create-new-resume.svg'
 import importResume from '../assets/import-your-resume.svg'
 import { Link } from 'react-router-dom'

@@ -1,7 +1,7 @@
 // dashboard
 import { useEffect, useState } from 'react'
-import AppLayout from '../ui/AppLayout.jsx'
-import DesktopView from '../ui/DesktopView.jsx'
+import AppLayout from '../Components/pages/Resume-Builder/AppLayout.jsx'
+import DesktopView from '../Components/pages/Resume-Builder/DesktopView.jsx'
 function Dashboard() {
   const [viewSize, setViewSize] = useState(null)
 
