@@ -7,9 +7,9 @@ import DOMPurify from 'dompurify'
 import { MdDelete } from 'react-icons/md'
 import { nanoid } from 'nanoid'
 import { useDispatch } from 'react-redux'
-import { selectUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
+import { selectUserData } from '../../../../Reducers/FormDataSlice.js'
 import { useSelector } from 'react-redux'
-import { setUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
+import { setUserData } from '../../../../Reducers/FormDataSlice.js'
 
 const CustomFormTab = ({ data, DeletCustomTab, idForCustom }) => {
   const description = data.description

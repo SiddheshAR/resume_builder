@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { selectUserData } from '../../reduxToolkit/FormDataSlice.jsx'
+import { selectUserData } from '../../Reducers/FormDataSlice.js'
 import { useSelector } from 'react-redux'
-import { selectEducationData } from '../../reduxToolkit/FormDataSlice.jsx'
-import { selectExperienceData } from '../../reduxToolkit/FormDataSlice.jsx'
+import { selectEducationData } from '../../Reducers/FormDataSlice.js'
+import { selectExperienceData } from '../../Reducers/FormDataSlice.js'
 
 function Template2() {
   const [count, setCount] = useState(0)

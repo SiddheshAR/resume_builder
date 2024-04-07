@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import ReactQuill from 'react-quill'
+// import ReactQuill from 'react-quill'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { setUserData } from '../../../reduxToolkit/FormDataSlice.jsx'
+import { setUserData } from '../../../Reducers/FormDataSlice.js'
 // import { FormSection } from "./MultiStepForm.jsx";
 
 export default function PersonaIInfo() {

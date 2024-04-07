@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 // import FormStepper from "./FormStepper/FormStepper.jsx";
 import { useDispatch } from 'react-redux'
-import { setExperienceData } from '../../../reduxToolkit/FormDataSlice.jsx'
+import { setExperienceData } from '../../../Reducers/FormDataSlice.js'
 
 import DOMPurify from 'dompurify'
 import { MdDelete } from 'react-icons/md'

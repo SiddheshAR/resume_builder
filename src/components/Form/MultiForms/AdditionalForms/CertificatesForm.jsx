@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form'
 import { MdDelete } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { setUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
-import { selectUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
+import { setUserData } from '../../../../Reducers/FormDataSlice.js'
+import { selectUserData } from '../../../../Reducers/FormDataSlice.js'
 
 const CertificatesForm = () => {
   const dispatch = useDispatch()

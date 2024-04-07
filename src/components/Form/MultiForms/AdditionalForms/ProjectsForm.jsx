@@ -6,9 +6,9 @@ import './quill.css'
 import DOMPurify from 'dompurify'
 import { MdDelete } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
-import { selectUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
+import { selectUserData } from '../../../../Reducers/FormDataSlice.js'
 import { useSelector } from 'react-redux'
-import { setUserData } from '../../../../reduxToolkit/FormDataSlice.jsx'
+import { setUserData } from '../../../../Reducers/FormDataSlice.js'
 import { nanoid } from 'nanoid'
 
 export const ProjectsTab = ({

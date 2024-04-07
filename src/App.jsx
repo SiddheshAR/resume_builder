@@ -1,9 +1,7 @@
 import './App.jsx'
 import Dashboard from './pages/Dashboard.jsx'
-
 import Home from './pages/Home.jsx'
 import FormPanel from './pages/FormPanel.jsx'
-
 import './App.css'
 import {
   Route,

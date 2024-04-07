@@ -2,8 +2,8 @@ import { useState } from 'react'
 // import {useForm} from 'react-hook-form';
 import { GrClose } from 'react-icons/gr'
 import { useDispatch } from 'react-redux'
-import { setUserData } from '../../../reduxToolkit/FormDataSlice.jsx'
-import { selectUserData } from '../../../reduxToolkit/FormDataSlice.jsx'
+import { setUserData } from '../../../Reducers/FormDataSlice.js'
+import { selectUserData } from '../../../Reducers/FormDataSlice.js'
 import { useSelector } from 'react-redux'
 function RemoveSkillTag(Id_num, array, setSkillArray, dispatch, userInputData) {
   const New_Array = [...array]

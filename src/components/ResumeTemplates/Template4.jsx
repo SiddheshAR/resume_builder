@@ -1,7 +1,7 @@
-import { selectUserData } from '../../reduxToolkit/FormDataSlice.jsx'
+import { selectUserData } from '../../Reducers/FormDataSlice.js'
 import { useSelector } from 'react-redux'
-import { selectExperienceData } from '../../reduxToolkit/FormDataSlice.jsx'
-import { selectEducationData } from '../../reduxToolkit/FormDataSlice.jsx'
+import { selectExperienceData } from '../../Reducers/FormDataSlice.js'
+import { selectEducationData } from '../../Reducers/FormDataSlice.js'
 
 function Template4() {
   const userInputData = useSelector(selectUserData)
