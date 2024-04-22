@@ -44,8 +44,8 @@ function Template5() {
                   : 'Candidate'}
               </div>
               <div className="job-title w-[250px] text-[15px] lg:text-md font-serif ">
-                {userExperienceData
-                  ? userExperienceData[userExperienceData.length - 1].Job_Title
+                {userExperienceData && userExperienceData.length>0
+                  ? userExperienceData[userExperienceData.length - 1]?.Job_Title
                   : 'Human Resource Manager'}
               </div>
             </div>

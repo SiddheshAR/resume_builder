@@ -203,7 +203,7 @@ function Template1() {
           <h2 className="text-3xl font-semibold text-[rgb(2,4,2)]">
             Professional Experience
           </h2>
-
+          {console.log(userEducationData)}
           {userExperienceData && userExperienceData.length > 0 ? (
             <>
               {userExperienceData.map((exp, index) => (

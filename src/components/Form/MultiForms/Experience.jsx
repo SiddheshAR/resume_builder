@@ -61,7 +61,7 @@ const Experience = () => {
     data.description = ExpDesc
     let currData = [...expData, data]
     setExpData(currData)
-    console.log(expData)
+    console.log(expData,currData)
     // Dispatcher here
     dispatch(setExperienceData(currData))
     // setSuccessMsg("Data is updated.");
@@ -73,6 +73,7 @@ const Experience = () => {
     let currData = [...expData]
     currData.splice(expID, 1)
     setExpData(currData)
+    dispatch(setExperienceData(currData))
   }
 
   return (

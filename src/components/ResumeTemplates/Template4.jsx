@@ -112,8 +112,8 @@ function Template4() {
               : 'Gupta'}
           </h1>
           <h4 className="jobmain-right text-center pt-2.5">
-            {userExperienceData
-              ? userExperienceData[userExperienceData.length - 1].Job_Title
+            {userExperienceData && userExperienceData>0
+              ? userExperienceData[userExperienceData.length - 1]?.Job_Title
               : 'MERN Stack Developer'}
           </h4>
           <hr className="my-4 w-4/5 bg-[aliceblue]  m-auto rounded-[70px] border-2 border-solid border-[aliceblue]" />

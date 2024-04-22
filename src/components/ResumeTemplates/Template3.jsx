@@ -43,8 +43,8 @@ function Template3() {
           {/* Occupation  */}
           <div className="occupation">
             <p className="text-xl font-[bold] text-[white] m-0.5">
-              {userExperienceData
-                ? userExperienceData[userExperienceData.length - 1].Job_Title
+              {userExperienceData && userExperienceData.length>0
+                ? userExperienceData[userExperienceData.length - 1]?.Job_Title
                 : 'MERN Stack Developer'}
             </p>
           </div>
