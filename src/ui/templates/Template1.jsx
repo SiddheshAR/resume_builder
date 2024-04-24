@@ -74,10 +74,10 @@ function Template1() {
           </div>
         </div>
 
-        <div className="w-4/5 bg-white text-[rgb(255,0,0)] ml-10 mt-5">
+        <div className="w-4/5 bg-white text-[rgb(219,219,219)] ml-10 mt-5">
           <hr />
         </div>
-        <div className="text-[rgb(167,27,36)] ml-10 mt-5 ">
+        <div className="text-[rgb(255,255,255)] ml-10 mt-5 ">
           <h3 className="text-3xl font-semibold text-[rgb(252,255,250)] mt-[60px]">
             EDUCATION
           </h3>
@@ -100,12 +100,12 @@ function Template1() {
                 >
                   <div className="duration flex gap-x-2">
                     <h2>{edu.degree}</h2>
-                    <span className="text-[15px] text-gray-500">
+                    <span className="text-[15px] text-[rgb(219,219,219)]">
                       {edu.schoolName} | {edu.startDate} - {edu.endDate}
                     </span>
                   </div>
 
-                  <div className="duration text-[15px] text-gray-500">
+                  <div className="duration text-[15px] text-[rgb(219,219,219)]">
                     {edu.description}
                   </div>
                 </div>
@@ -115,14 +115,14 @@ function Template1() {
             <div>
               <div>
                 <h2>{'Masters in Human Resources'}</h2>
-                <div className="duration text-[15px] text-gray-500">
+                <div className="duration text-[15px] text-[rgb(219,219,219)]">
                   {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
                   {'End Date'}
                 </div>
               </div>
               <div>
                 <h2>{'Masters in Human Resources'}</h2>
-                <div className="duration text-[15px] text-gray-500">
+                <div className="duration text-[15px] text-[rgb(219,219,219)]">
                   {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
                   {'End Date'}
                 </div>
