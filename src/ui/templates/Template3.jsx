@@ -106,7 +106,7 @@ function Template3() {
         <div className="about-me mb-[-50px] h-[380px] bg-[rgba(255,255,255,0.448)] w-[720px]">
           <div className="professional-experience flex flex-row">
             <div className="w-[90%] flex mt-3 ml-[40px] flex-col">
-              <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+              <h2 className="text-[35px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
                 About me
               </h2>
               <p className="text-[17px] text-[rgb(84,84,84)] m-[15px]">
@@ -118,7 +118,7 @@ function Template3() {
             </div>
             {/* this is EDU DESC  */}
             <div className="skill-set w-[450px] flex flex-col ml-5 mt-1 h-[230px] max-h-[230px] overflow-y-auto text-base p-5 rounded-[20px]">
-              <h2 className="text-[25px] mb-5 font-[bold] text-[rgb(99,133,255)]">
+              <h2 className="text-[35px] mb-5 font-[bold] text-[rgb(99,133,255)]">
                 Key Skills
               </h2>
               {userInputData &&
@@ -156,9 +156,10 @@ function Template3() {
 
         <div>
           <div className="about">
-            <h2 className="text-[25px]  ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+            <h2 className="text-[35px]  ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
               Experience
             </h2>
+            <div className='px-10'>
             {userExperienceData && userExperienceData.length > 0 ? (
               <>
                 {userExperienceData.map((exp, index) => (
@@ -239,6 +240,7 @@ function Template3() {
                 </ul>
               </>
             )}
+            </div>
             {/* <div className="flex flex-row ml-2 items-center justify-around">
               <p>Job Title</p>
               <p>Company name</p>
@@ -271,7 +273,7 @@ function Template3() {
           <div className="skilldev flex flex-row items-center justify-start w-[700px] h-[280px] bg-[rgba(255,255,255,0.448)]">
             {/* this is edu to go up  */}
             <div className="w-[90%] mt-[-20px] ml-[50px]">
-              <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)]">
+              <h2 className="text-[35px] font-[bold] text-[rgb(99,133,255)]">
                 Education
               </h2>
               {userEducationData && userEducationData.length > 0 ? (
