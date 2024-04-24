@@ -23,17 +23,17 @@ function Template4() {
         // style={{ transform: "scale(0.7)", marginTop: "-150px" }}
       >
         <div className="left-box">
-          <div className="profile-space  w-[200px] h-[200px] bg-white mt-10 mx-10  rounded-[300px] border-[5px] border-solid border-[gold]" />
+          <div className="profile-space w-[200px] h-[200px] bg-white mt-10 mx-10 ml-[100px] rounded-[300px] border-[5px] border-solid border-[gold]" />
           <div className="top-curve w-[400px] h-[822px] max-h-[822px] overflow-y-auto bg-[gold] mx-2.5 my-[50px] rounded-[50px_50px_0px_0px]">
             <div className="data">
-              <div className="about-right pt-px text-center px-5">
+              <div className="about-right h-auto pt-px text-center px-5">
                 <h1 className="text-center text-[40px] pt-2.5 text-3xl my-10">
                   About Me
                 </h1>
                 {userInputData && userInputData.description ? (
                   userInputData.description
                 ) : (
-                  <p>
+                  <p className='text-left px-2'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Libero quisquam modi suscipit hic deleniti totam sint
                     tempore vel velit! Perspiciatis, molestias maiores totam,
@@ -41,6 +41,7 @@ function Template4() {
                     officia eaque blanditiis. Deserunt eveniet veritatis, sunt,
                     quos, quis provident possimus illo eligendi veniam est
                     molestias? Dicta, quo quod. Repudiandae.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum quam animi nihil officia, illum velit expedita commodi, ex aspernatur soluta unde doloribus, libero saepe.
                   </p>
                 )}
               </div>
@@ -158,12 +159,13 @@ function Template4() {
             <h2 className="work-right text-center px-5 text-2xl">
               Work Experience
             </h2>
+            <div className='px-[15px]'>
             {userExperienceData && userExperienceData.length > 0 ? (
           <>
             {userExperienceData.map((exp, index) => (
               <div
                 key={index}
-                className="flex-col justify-start  exp-1 flex items-start w-[70%] gap-3 font-serif pt-2 lg:w-[100%]"
+                className="flex-col justify-start exp-1 flex items-start w-[70%] gap-3 font-serif pt-2 lg:w-[100%]"
               >
                 <div className="duration flex gap-x-2 ">
                   <h2>{exp.Job_Title}</h2>
@@ -211,10 +213,12 @@ function Template4() {
             </ul>
           </>
         )}
+            </div>
           </div>
           <hr className="my-4 w-4/5 bg-[aliceblue]  m-auto rounded-[70px] border-2 border-solid border-[aliceblue]" />
           <div className="Professional-skills">
             <h2 className="work-right text-center px-5 text-2xl">Education</h2>
+            <div className='px-[15px]'>
             {userEducationData && userEducationData.length > 0 ? (
           <>
             {userEducationData.map((edu, index) => (
@@ -253,6 +257,7 @@ function Template4() {
             </div>
           </div>
         )}
+            </div>
 
           </div>
           <hr className="my-4 w-4/5 bg-[aliceblue]  m-auto rounded-[70px] border-2 border-solid border-[aliceblue]" />
