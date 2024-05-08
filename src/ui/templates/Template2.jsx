@@ -152,21 +152,21 @@ function Template2() {
                   </div>
                 </div>
                 <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                  <li className="list-item">
+                  <li>
                     Implement effective company policies to ensure that all
                     practices comply with labor and employment regulations
                   </li>
-                  <li className="list-item">
+                  <li>
                     Increased employee retention rates by managing workplace
                     satisfaction to an over 90% success rate by creating and
                     maintaining a positive work environment
                   </li>
-                  <li className="list-item">
+                  <li>
                     Develop targeted outreach practices to increase minority
                     recruitment and ensure compliance with affirmative action
                     policies
                   </li>
-                  <li className="list-item">
+                  <li>
                     Monitor scheduled in and out times as well as employee
                     breaks to ensure that proper employment laws are met
                   </li>
@@ -179,21 +179,21 @@ function Template2() {
                   </div>
                 </div>
                 <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                  <li className="list-item">
+                  <li>
                     Implement effective company policies to ensure that all
                     practices comply with labor and employment regulations
                   </li>
-                  <li className="list-item">
+                  <li>
                     Increased employee retention rates by managing workplace
                     satisfaction to an over 90% success rate by creating and
                     maintaining a positive work environment
                   </li>
-                  <li className="list-item">
+                  <li>
                     Develop targeted outreach practices to increase minority
                     recruitment and ensure compliance with affirmative action
                     policies
                   </li>
-                  <li className="list-item">
+                  <li>
                     Monitor scheduled in and out times as well as employee
                     breaks to ensure that proper employment laws are met
                   </li>

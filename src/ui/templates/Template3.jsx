@@ -104,7 +104,7 @@ function Template3() {
       <div className="data-space">
         {/* About me  */}
         <div className="about-me mb-[-50px] h-[380px] bg-[rgba(255,255,255,0.448)] w-[720px]">
-          <div className="professional-experience flex flex-row">
+          <div className="professional-experience flex flex-row items-center">
             <div className="w-[90%] flex mt-3 ml-[40px] flex-col">
               <h2 className="text-[35px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
                 About me
@@ -117,7 +117,7 @@ function Template3() {
               </p>
             </div>
             {/* this is EDU DESC  */}
-            <div className="skill-set w-[450px] flex flex-col ml-5 mt-1 h-[230px] max-h-[230px] overflow-y-auto text-base p-5 rounded-[20px]">
+            <div className=" skill-set w-[450px] flex flex-col ml-5 mt-1 h-[230px] max-h-[230px] overflow-y-auto text-base p-5 rounded-[20px]">
               <h2 className="text-[35px] mb-5 font-[bold] text-[rgb(99,133,255)]">
                 Key Skills
               </h2>
@@ -126,16 +126,18 @@ function Template3() {
               userInputData.skills.length > 0 ? (
                 userInputData.skills.map((skill, index) => (
                   <ul
-                    className="pt-5 text-lg text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
-                    key={index}
+                  className="pt-5 text-lg  text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
+                  key={index}
+                >
+                  <li
+                    className={`skillLevel w-[${skill[1]}%] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
                   >
-                    <div
-                      className={`skillLevel w-[${skill[1]}] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
-                    >
-                      {skill[1]}
-                    </div>
-                    <li className="updated-skill ">{skill[0]}</li>
-                  </ul>
+                    {skill[1]}
+                  </li>
+                  <li className="updated-skill text-[17px] text-[rgb(84,84,84)]">
+                    {skill[0]}
+                  </li>
+                </ul>
                 ))
               ) : (
                 <div className="skillarray">
@@ -192,21 +194,21 @@ function Template3() {
                   </div>
                 </div>
                 <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                  <li className="list-item">
+                  <li>
                     Implement effective company policies to ensure that all
                     practices comply with labor and employment regulations
                   </li>
-                  <li className="list-item">
+                  <li>
                     Increased employee retention rates by managing workplace
                     satisfaction to an over 90% success rate by creating and
                     maintaining a positive work environment
                   </li>
-                  <li className="list-item">
+                  <li>
                     Develop targeted outreach practices to increase minority
                     recruitment and ensure compliance with affirmative action
                     policies
                   </li>
-                  <li className="list-item">
+                  <li>
                     Monitor scheduled in and out times as well as employee
                     breaks to ensure that proper employment laws are met
                   </li>
@@ -219,21 +221,21 @@ function Template3() {
                   </div>
                 </div>
                 <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                  <li className="list-item">
+                  <li>
                     Implement effective company policies to ensure that all
                     practices comply with labor and employment regulations
                   </li>
-                  <li className="list-item">
+                  <li>
                     Increased employee retention rates by managing workplace
                     satisfaction to an over 90% success rate by creating and
                     maintaining a positive work environment
                   </li>
-                  <li className="list-item">
+                  <li>
                     Develop targeted outreach practices to increase minority
                     recruitment and ensure compliance with affirmative action
                     policies
                   </li>
-                  <li className="list-item">
+                  <li>
                     Monitor scheduled in and out times as well as employee
                     breaks to ensure that proper employment laws are met
                   </li>
