@@ -139,7 +139,7 @@ function AppLayout() {
       })}
     </div>
   ) : (
-    <div className="layout flex flex-col items-center lg:flex-col-reverse gap-20 pb-[80px] md:pb-[100px]">
+    <div className="layout flex flex-col items-center  lg:flex-col-reverse gap-20 pb-[80px] md:pb-[100px]">
       <Header />
       <FormSection />
       <Navbar

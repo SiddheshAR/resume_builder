@@ -16,7 +16,7 @@ function Template3() {
   const userEducationData = useSelector(selectEducationData)
   return (
     <div
-      className="a4-sheet  bg-white w-[793px] h-[11210x] lg:max-h-[1110px] lg:overflow-y-auto mt-5 flex flex-col items-center  border border-gray-200 "
+      className="a4-sheet  bg-white w-[793px] h-[11210x] lg:max-h-[1110px] overflow-y-auto mt-5 flex flex-col items-center  border border-gray-200 "
       // style={{ transform: "scale(0.7)", marginTop: "-150px" }}
     >
       {/* <div className="w-[210mm] h-[297mm] lg:max-h-[1100px] lg:overflow-hidden  "> */}
@@ -105,16 +105,24 @@ function Template3() {
         {/* About me  */}
         <div className="about-me mb-[-50px] h-[380px] bg-[rgba(255,255,255,0.448)] w-[720px]">
           <div className="professional-experience flex flex-row items-center">
-            <div className="w-[90%] flex mt-3 ml-[40px] flex-col">
+            <div className="w-[90%] flex mt-3 ml-[40px] flex-col items-start">
               <h2 className="text-[35px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
                 About me
               </h2>
-              <p className="text-[17px] text-[rgb(84,84,84)] m-[15px]">
-                Worked with labor unions to negotiate compensation packages for
-                workers. Organized new hire training initiatives as well. Worked
-                with labor unions to negotiate compensation packages for
-                workers. Organized new hire training initiatives as well.
-              </p>
+              {userInputData && userInputData.description ? (
+                userInputData.description
+              ) : (
+                <p>
+                  Human resources generalist with 8 years of experience in HR,
+                  including hiring and terminating, disciplining employees and
+                  helping department managers improve employee performance.
+                  Worked with labor unions to negotiate compensation packages
+                  for workers. Organized new hire training initiatives as well
+                  as ongoing training to adhere to workplace safety standards.
+                  Worked with OSHA to ensure that all safety regulations are
+                  followed.
+                </p>
+              )}
             </div>
             {/* this is EDU DESC  */}
             <div className=" skill-set w-[450px] flex flex-col ml-5 mt-1 h-[230px] max-h-[230px] overflow-y-auto text-base p-5 rounded-[20px]">
@@ -126,18 +134,18 @@ function Template3() {
               userInputData.skills.length > 0 ? (
                 userInputData.skills.map((skill, index) => (
                   <ul
-                  className="pt-5 text-lg  text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
-                  key={index}
-                >
-                  <li
-                    className={`skillLevel w-[${skill[1]}%] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
+                    className="pt-5 text-lg  text-[rgb(252,255,250)] text-gray-500 leading-[25px]  flex items-center  w-[90%]   "
+                    key={index}
                   >
-                    {skill[1]}
-                  </li>
-                  <li className="updated-skill text-[17px] text-[rgb(84,84,84)]">
-                    {skill[0]}
-                  </li>
-                </ul>
+                    <li
+                      className={`skillLevel w-[${skill[1]}%] p-[2px]  rounded-sm  bg-[rgb(99,133,255)] mr-[15px] text-white text-center text-[10px]`}
+                    >
+                      {skill[1]}
+                    </li>
+                    <li className="updated-skill text-[17px] text-[rgb(84,84,84)]">
+                      {skill[0]}
+                    </li>
+                  </ul>
                 ))
               ) : (
                 <div className="skillarray">
@@ -156,18 +164,17 @@ function Template3() {
         </div>
         <hr className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
 
-        <div>
-          <div className="about">
-            <h2 className="text-[35px]  ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
-              Experience
-            </h2>
-            <div className='px-10'>
+        <div className="about">
+          <h2 className="text-[35px]  ml-[50px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
+            Experience
+          </h2>
+          <div className="px-10">
             {userExperienceData && userExperienceData.length > 0 ? (
               <>
                 {userExperienceData.map((exp, index) => (
                   <div
                     key={index}
-                    className="flex-col justify-start  ml-[50px]  exp-1 flex items-start w-[70%] gap-3 font-serif pt-2 lg:w-[100%]"
+                    className="flex-col justify-start    exp-1 flex items-start w-[70%] gap-3 font-serif pt-2"
                   >
                     <div className="duration flex gap-x-2 ">
                       <h2>{exp.Job_Title}</h2>
@@ -242,8 +249,8 @@ function Template3() {
                 </ul>
               </>
             )}
-            </div>
-            {/* <div className="flex flex-row ml-2 items-center justify-around">
+          </div>
+          {/* <div className="flex flex-row ml-2 items-center justify-around">
               <p>Job Title</p>
               <p>Company name</p>
               <div>
@@ -265,17 +272,17 @@ function Template3() {
                 </p>
               )}
             </div> */}
-          </div>
         </div>
+        <hr className="w-[700px] mt-[20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
 
         {/* Professional skills  */}
-        <div className="mt-[70px]">
-          <hr className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
+        <div className="">
+          {/* <hr className="w-[700px] mt-[-20px] ml-[50px] h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" /> */}
 
-          <div className="skilldev flex flex-row items-center justify-start w-[700px] h-[280px] bg-[rgba(255,255,255,0.448)]">
+          <div className="skilldev flex flex-row items-center justify-start w-[700px]  bg-[rgba(255,255,255,0.448)]">
             {/* this is edu to go up  */}
-            <div className="w-[90%] mt-[-20px] ml-[50px]">
-              <h2 className="text-[35px] font-[bold] text-[rgb(99,133,255)]">
+            <div className="w-[90%]  ml-[50px]">
+              <h2 className="text-[35px] mt-[30px] font-[bold] text-[rgb(99,133,255)]">
                 Education
               </h2>
               {userEducationData && userEducationData.length > 0 ? (
@@ -322,14 +329,14 @@ function Template3() {
           </div>
         </div>
 
-        <hr className="w-[700px]   mt-[-20px] ml-[50px]  h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
+        <hr className="w-[700px]  mt-[20px] ml-[50px]  h-[5px] bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
       </div>
       {/* Adding additional sections based on userData */}
       {/* Languages */}
       {userInputData &&
       userInputData.language &&
       userInputData.language.length > 0 ? (
-        <>
+        <div className="">
           <h2 className="text-[25px] font-[bold] text-[rgb(99,133,255)] m-[15px]">
             Languages
           </h2>
@@ -343,10 +350,10 @@ function Template3() {
               </ul>
             )
           })}
-        </>
+        </div>
       ) : null}
       {userInputData && userInputData.language && (
-        <hr className="w-[700px] h-[5px]  mt-[-20px] ml-[50px]  bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
+        <hr className="w-[700px] h-[5px]  mt-[20px] ml-[50px]  bg-[rgb(99,133,255)] shadow-[0_0_5px_2px_rgba(82,160,255,0.8)] rounded-[90%] border-[none]" />
       )}
 
       {/* Projects */}
