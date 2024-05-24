@@ -17,7 +17,7 @@ function Template1() {
     //       <div
     //   className="w-[210mm] h-[297mm] lg:max-h-[842px] lg:overflow-hidden flex flex-row  "
     // >
-    <div className="w-[210mm] h-[1120px] max-h-[1120px] lg:overflow-y-auto flex flex-row border border-gray-300 ">
+    <div className="w-[210mm] h-[1120px] max-h-[1120px] overflow-y-auto flex flex-row border border-gray-300 ">
       <div className="bg-[rgb(39,55,85)] w-[150%] text-[rgb(252,255,250)] max-h-[297mm] overflow-auto grow">
         <div className="leftimgbox">
           <div className="img">
@@ -74,10 +74,10 @@ function Template1() {
           </div>
         </div>
 
-        <div className="w-4/5 bg-white text-[rgb(255,0,0)] ml-10 mt-5">
+        <div className="w-4/5 bg-white text-[rgb(219,219,219)] ml-10 mt-5">
           <hr />
         </div>
-        <div className="text-[rgb(167,27,36)] ml-10 mt-5 ">
+        <div className="text-[rgb(255,255,255)] ml-10 mt-5 ">
           <h3 className="text-3xl font-semibold text-[rgb(252,255,250)] mt-[60px]">
             EDUCATION
           </h3>
@@ -100,12 +100,12 @@ function Template1() {
                 >
                   <div className="duration flex gap-x-2">
                     <h2>{edu.degree}</h2>
-                    <span className="text-[15px] text-gray-500">
+                    <span className="text-[15px] text-[rgb(219,219,219)]">
                       {edu.schoolName} | {edu.startDate} - {edu.endDate}
                     </span>
                   </div>
 
-                  <div className="duration text-[15px] text-gray-500">
+                  <div className="duration text-[15px] text-[rgb(219,219,219)]">
                     {edu.description}
                   </div>
                 </div>
@@ -115,14 +115,14 @@ function Template1() {
             <div>
               <div>
                 <h2>{'Masters in Human Resources'}</h2>
-                <div className="duration text-[15px] text-gray-500">
+                <div className="duration text-[15px] text-[rgb(219,219,219)]">
                   {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
                   {'End Date'}
                 </div>
               </div>
               <div>
                 <h2>{'Masters in Human Resources'}</h2>
-                <div className="duration text-[15px] text-gray-500">
+                <div className="duration text-[15px] text-[rgb(219,219,219)]">
                   {'The University of Texas, Dallas '} | {'Start Date'} -{' '}
                   {'End Date'}
                 </div>
@@ -184,7 +184,7 @@ function Template1() {
         </div>
       </div>
 
-      <div className="bg-[#FFFFFF]">
+      <div className="bg-[#FFFFFF] h-[1120px] max-h-[1120px] overflow-y-auto">
         <div className="text-xl font-medium text-black ml-10 mt-20 ">
           <h2 className="text-3xl font-bold text-[rgb(2,4,2)]">Profile</h2>
           {userInputData && userInputData.description ? (
@@ -219,7 +219,7 @@ function Template1() {
                     </span>
                   </div>
                   <div
-                    className="text-gray-500"
+                    className=" text-base font-medium text-[rgb(89,88,90)]"
                     dangerouslySetInnerHTML={{
                       __html: exp.description,
                     }}
@@ -235,22 +235,22 @@ function Template1() {
                   {'XYZ company'} | {'Start Date - End Date'}
                 </div>
               </div>
-              <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                <li className="list-item">
+              <ul className="text-base font-medium text-[rgb(89,88,90)] lg:leading-[25px]">
+                <li>
                   Implement effective company policies to ensure that all
                   practices comply with labor and employment regulations
                 </li>
-                <li className="list-item">
+                <li>
                   Increased employee retention rates by managing workplace
                   satisfaction to an over 90% success rate by creating and
                   maintaining a positive work environment
                 </li>
-                <li className="list-item">
+                <li>
                   Develop targeted outreach practices to increase minority
                   recruitment and ensure compliance with affirmative action
                   policies
                 </li>
-                <li className="list-item">
+                <li>
                   Monitor scheduled in and out times as well as employee breaks
                   to ensure that proper employment laws are met
                 </li>
@@ -262,22 +262,22 @@ function Template1() {
                   {'XYZ company'} | {'Start Date - End Date'}
                 </div>
               </div>
-              <ul className="text-[15px] text-gray-500 lg:leading-[25px]">
-                <li className="list-item">
+              <ul className="text-base font-medium text-[rgb(89,88,90)] lg:leading-[25px]">
+                <li>
                   Implement effective company policies to ensure that all
                   practices comply with labor and employment regulations
                 </li>
-                <li className="list-item">
+                <li>
                   Increased employee retention rates by managing workplace
                   satisfaction to an over 90% success rate by creating and
                   maintaining a positive work environment
                 </li>
-                <li className="list-item">
+                <li>
                   Develop targeted outreach practices to increase minority
                   recruitment and ensure compliance with affirmative action
                   policies
                 </li>
-                <li className="list-item">
+                <li>
                   Monitor scheduled in and out times as well as employee breaks
                   to ensure that proper employment laws are met
                 </li>
@@ -308,7 +308,7 @@ function Template1() {
               {userInputData.projects.map((project) => {
                 return (
                   <ul key={project.id} className="pt-5 text-lg font-medium">
-                    <div className="project-header mt-2 text-base text-[rgb(89,88,90)]">
+                    <div className="project-header mt-2 text-base ">
                       <h2 className="text-2xl heading-D1">{project.Heading}</h2>
                       <a
                         href={project.Link}
@@ -318,7 +318,7 @@ function Template1() {
                       </a>
                     </div>
                     <div
-                      className="max-w-[400px] text-wrap pt-[10px]"
+                      className="max-w-[400px] text-base font-medium text-[rgb(89,88,90)] text-wrap pt-[10px]"
                       dangerouslySetInnerHTML={{ __html: project.description }}
                     />
                   </ul>
@@ -366,13 +366,13 @@ function Template1() {
                   key={customData.id}
                   className="pt-5 text-lg font-medium ml-10"
                 >
-                  <div className="project-header mt-2 text-base text-[rgb(89,88,90)]">
+                  <div className="project-header mt-2 text-base ">
                     <h2 className=" text-3xl font-semibold text-[rgb(2,4,2)]">
                       {' '}
                       {customData.Custom_Heading}
                     </h2>
                     <div
-                      className="max-w-[400px] text-wrap pt-[10px]"
+                      className="max-w-[400px] text-wrap text-base font-medium text-[rgb(89,88,90)] pt-[10px]"
                       dangerouslySetInnerHTML={{
                         __html: customData.description,
                       }}

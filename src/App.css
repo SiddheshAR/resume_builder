@@ -108,6 +108,7 @@ ul .list-item::before,
     right: 280px;
   }
 }
+
 @media screen and (min-width: 375px) {
   #temp {
     transform: scale(0.4);
